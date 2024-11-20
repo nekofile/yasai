@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+p, h1, h2, ul{
+    margin: 0;
+}
+*{
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+a{
+    color: #f88;
+}
+a:hover{
+    color: #ffa8a8;
+}
+.wrapper-header{
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: repeat-x;
+}
+.header{
+    margin: 0 auto;
+    width: 980px;
+    height: 190px;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+}
+.contact{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 10px 30px;
+    background-color: #f38d1f;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    color: #f9efdb;
+}
+.contact h2{
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+.contact p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+}
+.wrapper-nav{
+    background-color: #f38d1f;
+}
+.nav{
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+    list-style-type: none;
+    overflow: hidden;
+}
+.nav li{
+    float: left;
+    width: 20%;
+}
+/* display: block; 
+をかけると、文字だけでなく、文字の収まっている箱全体をクリックボタンに出来る */
+.nav li a{
+    display: block;
+    padding: 20px 0;
+    border-right: 1px solid #ebcc99;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: #f9efdb;
+}
+/* :last-child で、最後の右端のボーダーラインが消せる */
+.nav li:last-child a{
+    border-right: none;
+}
+.nav li a:hover{
+    background-color: #ffa320;
+}
+/* font-size: 0; 
+= img {vertical-align: bottom;} と結果は同じ */
+.keyvisual{
+    margin: 0 auto;
+    width: 980px;
+    font-size: 0;
+}
+.main{
+    margin: 0 auto;
+    width: 980px;
+}
+.main::after{
+    content: "";
+    display: block;
+    font-size: 0;
+    clear: both;
+}
+.news{
+    float: left;
+    width: 610px;
+    padding: 40px 20px;
+}
+.news h2{
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #695c4b;
+}
+.news div{
+    padding: 10px;
+    border-top: 1px dashed #e8dbcf;
+    overflow: hidden;
+}
+/* border-radius: 50%; で、画像を丸く切り出せる */
+.news div img{
+    float: left;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+}
+.banners{
+    float: left;
+    width: 290px;
+    padding: 40px 20px;
+}
+.banners div{
+    font-size: 0;
+    margin: 0 0 15px 0;
+}
+.banners a:hover img{
+    opacity: 0.5;
+}
+.footer{
+    margin: 0 auto;
+    width: 980px;
+    border-top: 3px solid #e8dbcf;
+    padding: 20px;
+    color: #927f67;
+}
+.footer-nav a{
+    color: #927f67;
+    text-decoration: none;
+}
+.footer-nav a:hover{
+    color: #baa387;
+}
+.copyright{
+    margin: 10px 0 0 0;
+    text-align: right;
+}
