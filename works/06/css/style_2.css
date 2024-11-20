@@ -1,0 +1,464 @@
+﻿@charset "utf-8";
+
+hrml{
+    overflow-y: scroll;
+}
+body, div, dl, dt, dd, ul, ul li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td,
+section, nav, article, aside, hgroup, header, address,
+figure, figcaption {
+	margin: 0;
+	padding: 0;
+}
+img{
+    vertical-align: bottom;
+}
+ul li {
+	list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* PC非表示 */
+
+.top-img2,
+.flow-sp,
+.bnr_sp{
+    display: none;
+}
+
+/* フルードイメージ対応 */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	background-color: #666;
+}
+
+#container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+/* ------ Column ------ */
+
+.row {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.one-fifth {width: 18%;}
+.three-fifth {width: 64%;}
+.one-second {width: 50%;}
+
+/* ------ Header ------ */
+
+header {
+	width: 100%;
+}
+
+#header{
+    height: 83px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    padding-left: 37px;
+}
+#btn{
+    background-color: #360;
+    color: #fff;
+    font-size: 16px;
+    width: 123px;
+    display: block;
+    margin-right: 37px;
+    padding: 4px 0;
+    text-align: center;
+    border-radius: 1px;
+    border: 2px solid #360;
+}
+#btn:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #360;
+}
+.top-img{
+    border-top: 1px solid #ccc;
+}
+
+/* ------ Global Navi ------ */
+
+#g-nav{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#g-nav li a{
+    color: #333;
+    padding-bottom: 4px;
+}
+#g-nav li a:hover{
+    border-bottom: 1px solid #333;
+}
+
+/* ------ h2 ------ */
+
+.h2{
+    width: 200px;
+    margin: 0 auto;
+    padding: 150px 0 60px 0;
+}
+h2{
+    color: #333;
+    padding-top: 6px;
+    text-align: center;
+    border-bottom: 1px dashed #666;
+}
+.h2-p{
+    color: #666;
+    text-align: center;
+}
+
+/* ------ Feature ------ */
+
+.feature section{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 76px;
+}
+.section{
+    display: flex;
+}
+.number{
+    font-size: 40px;
+    font-family: serif;
+    color: #360;
+    padding-left: 10px;
+}
+.border{
+    background-color: #fff;
+    color: #360;
+    font-size: 14px;
+    font-weight: 100;
+    width: 140px;
+    height: 23px;
+    display: block;
+    margin: 15px 0 0 20px;
+    padding: 4px 0;
+    text-align: center;
+    border: 1px solid #360;
+}
+section h3{
+    font-weight: 100;
+    font-size: 25px;
+    padding: 0 0 15px 10px;
+}
+.section-p{
+    font-size: 12px;
+    line-height: 2;
+}
+.section-a{
+    font-size: 12px;
+    color: #360;
+    line-height: 4;
+    text-decoration: underline;
+}
+
+/* ------ Shopping-flow ------ */
+
+.shopping-flow img{
+    padding-bottom: 150px;
+}
+
+/* ------ bunner ------ */
+
+.bnr img{
+    padding-bottom: 50px;
+}
+.btn2{
+    width: 360px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+}
+.btn2 a{
+    background-color: #360;
+    color: #fff;
+    font-size: 21px;
+    display: block;
+    padding: 22px 0;
+    text-align: center;
+    border: 3px solid #360;
+}
+.btn2 a:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #360;
+}
+
+/* ------ Page top ------ */
+
+#top{
+    max-width: 1280px;
+    background-color: #999;
+    padding: 18px 0;
+    margin-bottom: 2px;
+}
+#top:hover{
+    opacity: 0.7;
+}
+#top p{
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+}
+
+/* ------ Footer ------ */
+
+footer{
+    background-color: #696;
+}
+footer ul{
+    text-align: center;
+    padding: 40px 0;
+}
+footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+    border-left: 1px solid #fff;
+}
+footer ul li:first-child{
+    border-left: none;
+}
+footer ul li a{
+    color: #fff;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+}
+
+/* ------------ タブレット対応 ------------ */
+/* ------------ タブレット対応 ------------ */
+/* ------------ タブレット対応 ------------ */
+
+@media screen and (max-width:979px) {
+
+    .one-fifth {width: 100%;}
+    .three-fifth {width: 100%;}
+    .row{
+        padding: 0 10px;
+    }
+
+    /* ------ Header ------ */
+    
+    #header{
+        display: block;
+        height: auto;
+    }
+    .one-fifth h1{
+        text-align: center;
+    }
+    #logo{
+        padding: 20px 0 20px 0;
+    }
+    #g-nav{
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #g-nav li{
+        width: 23%;
+        text-align: center;
+        padding: 10px 0 7px 0;
+        background-color: #fc9;
+        border-radius: 8px;
+    }
+    #g-nav li a:hover{
+        border-bottom: none;
+    }
+    #btn{
+        font-size: 18px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 4px 0;
+    }
+    /* ------ feature ------ */
+
+    .feature section{
+        padding-bottom: 50px;
+    }
+    .feature section:last-child{
+        padding-bottom: 30px;
+    }
+    .h2{
+        width: 200px;
+        margin: 0 auto;
+        padding: 100px 0 50px 0;
+    }
+    .one-second{
+        padding: 10px;
+    }
+
+    /* ------ shopping-flow ------ */
+
+    .shopping-flow img{
+        padding-bottom: 100px;
+    }
+
+    /* ------ bunner ------ */
+
+    .btn2{
+        padding-bottom: 100px;
+    }
+
+    /* ------ Footer ------ */
+
+    footer ul{
+        padding: 40px 0 0 0;
+    }
+    footer ul li{
+        padding: 10px 15px;
+        border-left: none;
+    }
+
+}
+
+/* ------------ スマートフォン対応 ------------ */
+/* ------------ スマートフォン対応 ------------ */
+/* ------------ スマートフォン対応 ------------ */
+
+@media screen and (max-width:640px) {
+
+    .one-fifth {width: 100%;}
+    .three-fifth {width: 100%;}
+    .one-second {width: 100%;}
+
+    .row{
+        padding: 0 20px;
+    }
+
+    .top-img2,
+    .flow-sp,
+    .bnr_sp{
+    display: block;
+    }
+    .top-img,
+    .flow-pc,
+    .bnr_pc{
+    display: none;
+    }
+
+    /* ------ header ------ */
+
+    #header{
+        display: block;
+        height: auto;
+    }
+    .one-fifth h1{
+        text-align: center;
+    }
+    #logo{
+        padding: 20px 0 20px 0;
+    }
+    #g-nav{
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #g-nav li{
+        width: 48%;
+        text-align: center;
+        padding: 10px 0 6px 0;
+        background-color: #fc9;
+        border: 4px solid #fff;
+        border-radius: 10px;
+    }
+    #g-nav li a:hover{
+        border-bottom: none;
+    }
+    #btn{
+        font-size: 18px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 4px 0;
+    }
+
+    /* ------ feature ------ */
+
+    .one-second{
+        padding: 0;
+    }
+    .feature section{
+        display: block;
+        padding-bottom: 76px;
+    }
+    .feature section:last-child{
+        padding-bottom: 0;
+    }
+    .h2{
+        width: 200px;
+        margin: 0 auto;
+        padding: 80px 0 50px 0;
+    }
+    .number{
+        padding-left: 0;
+    }
+    section h3{
+        font-size: 26px;
+        padding: 0 0 15px 0;
+    }
+    section img{
+        padding-top: 10px;
+    }
+    .section-p{
+        font-size: 16px;
+        line-height: 2;
+    }
+    br{
+        display: none;
+    }
+    .section-a{
+        font-size: 16px;
+        color: #360;
+        line-height: 4;
+        text-decoration: underline;
+    }
+
+    /* ------ shopping-flow ------ */
+
+    .shopping-flow img{
+        padding-bottom: 70px;
+    }
+
+    /* ------ bunner ------ */
+
+    .btn2{
+        padding-bottom: 70px;
+    }
+
+    /* ------ Footer ------ */
+
+    footer ul{
+        text-align: left;
+        padding: 40px 0 0 10px;
+    }
+    footer ul li{
+        display: block;
+        padding: 7px;
+        border-left: none;
+    }
+
+}

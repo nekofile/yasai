@@ -1,0 +1,1152 @@
+﻿@charset "utf-8";
+
+/*---------------------------------------------
+	Browser Default Initialization
+  ---------------------------------------------*/
+
+html {
+	overflow-y: scroll;
+}
+body, div, dl, dt, dd, ul, ul li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td,
+section, nav, article, aside, hgroup, header, address,
+figure, figcaption {
+	margin: 0;
+	padding: 0;
+	line-height: 160%;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th {
+	text-align: left;
+}
+q:before ,q:after {
+	content: '';
+}
+object, embed {
+	vertical-align: top;
+}
+hr, legend {
+	display: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+img, abbr, acronym, fieldset {
+	border: 0;
+}
+img {
+	vertical-align: top;
+	-ms-interpolation-mode: bicubic;
+}
+ul li {
+	list-style-type: none;
+}
+
+/* ------ Body ------ */
+
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	color: #666;
+	font-size: 16px;
+	line-height: 160%;
+	text-align: left;
+	letter-spacing: -0.001em;		/* iOS4でのテキストの隙間への対応 */
+	-webkit-text-size-adjust: 100%;		/* 文字サイズの自動調整機能のキャンセル */
+}
+.win body {
+	font-family: 'メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+/* ------ Anchor ------ */
+
+a {
+	outline: none;
+}
+
+a:link {
+	text-decoration: none;
+	color: #38bdbb;
+}
+a:visited {
+	text-decoration: none;
+	color: #38bdbb;
+}
+a:hover {
+	text-decoration: underline;
+	color: #38bdbb;
+}
+a:active {
+	text-decoration: underline;
+	color: #38bdbb;
+}
+
+
+/*-----------------------------------------------------	*/
+/*	for all						*/
+/*-----------------------------------------------------	*/
+
+/* ------ General Settings ------ */
+
+/* フルードイメージ対応 */
+img {
+	max-width: 100%;
+	height: auto;
+}
+.ie8 img {
+	width: auto;
+}
+
+p {
+	font-size: 76%;
+}
+
+.img {
+	text-align: center;
+}
+
+.text-center {
+	text-align: center;
+}
+
+body {
+	background-color: #ddd;
+}
+
+#container {
+	position: relative;			/* 親要素をposition:relativeとする */
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+
+/* ------ Font ------ */
+
+/* 各ブラウザに対応したWebフォントを指定 */
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ------ Column ------ */
+
+.row {
+	max-width: 930px;
+	margin: 0 auto;
+}
+.row:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* 各カラムを横並びにし、左マージンを設定 */
+.col {
+	float: left;
+	margin-left: 3.2258064515%;
+}
+
+/* 左端のカラムの左マージンを削除 */
+.col:first-child,
+.col.left {margin-left: 0;}
+
+/* カラムの左右を入れ替えるための設定 */
+.col.right {
+	float: right;
+	margin-left: 3.2258064515%;
+}
+
+/* 各カラムの幅を％で設定 */
+.one-second {width: 48.3870967741%;}
+.one-third {width: 31.1827956988%;}
+.two-third {width: 65.5913978494%;}
+
+
+/* ------ Header ------ */
+
+header {
+	width: 100%;
+	background-color: #222;
+	padding-top: 40px;
+}
+header .row {
+	position: relative;
+}
+header .row:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 0;
+	margin-left: 35px;
+	border-top: solid 10px #000;
+	border-left: solid 10px transparent;
+	border-right: solid 10px transparent;
+}
+header h1 {
+	width: 87px;
+	height: 55px;
+	margin-top: 20px;
+}
+
+/* ------ Global Navi ------ */
+
+/* デスクトップ／タブレット用表示では、右寄せで配置 */
+#gnav {
+	float: right;
+	width: 90%;
+}
+
+/* ナビゲーションの各項目は、横並びに配置 */
+#gnav li {
+	float: left;
+	width: 20%;
+}
+#gnav a {
+	display: block;
+	position: relative;
+	z-index: 2000;
+	height: 30px;
+	padding-top: 50px;
+	font-size: 76%;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+}
+
+/* 疑似要素にアイコンフォントを指定 */
+#gnav a:before {
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 15px;
+	text-align: center;
+	font-family: 'icomoon';
+ 	font-size: 22px;
+	color: #fff;
+}
+/* 疑似要素にborderを使った三角マークを記述 */
+#gnav a:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -10px;
+	left: 50%;
+	margin-left: -10px;
+	border-left: solid 10px transparent;
+	border-right: solid 10px transparent;
+}
+/* ナビゲーションの色をグラデーションにする */
+#products a:link,
+#products a:visited {
+	background-color: #42b0c7;
+	background: -moz-linear-gradient(top, #31c5b5, #2595ad);
+	background: -webkit-gradient(linear, left top, left bottom, from(#31c5b5), to(#2595ad));
+	background: -webkit-linear-gradient(top, #31c5b5, #2595ad);
+	background: linear-gradient(to bottom, #31c5b5, #2595ad);
+}
+/* マウスオーバー時にグラデーションの色を変更 */
+#products a:hover,
+#products a:active {
+	background-color: #34a5bd;
+	background: -moz-linear-gradient(top, #45d8c8, #34a5bd);
+	background: -webkit-gradient(linear, left top, left bottom, from(#45d8c8), to(#34a5bd));
+	background: -webkit-linear-gradient(top, #45d8c8, #34a5bd);
+	background: linear-gradient(to bottom, #45d8c8, #34a5bd);
+}
+/* 疑似要素に、アイコンフォントに割り当てられた文字を記述 */
+#products a:before {
+	content: "\61";
+}
+/* マウスオーバー時にborderを使った三角マークを表示 */
+#products a:link:after,
+#products a:visited:after {
+	display: none;
+}
+#products a:hover:after,
+#products a:active:after {
+	display: block;
+	border-top: solid 10px #34a5bd;
+}
+/* ナビゲーションの色をグラデーションにする */
+#company a:link,
+#company a:visited {
+	background-color: #a5cb6b;
+	background: -moz-linear-gradient(top, #bcc046, #8baf52);
+	background: -webkit-gradient(linear, left top, left bottom, from(#bcc046), to(#8baf52));
+	background: -webkit-linear-gradient(top, #bcc046, #8baf52);
+	background: linear-gradient(to bottom, #bcc046, #8baf52);
+}
+/* マウスオーバー時にグラデーションの色を変更 */
+#company a:hover,
+#company a:active {
+	background-color: #9bbf63;
+	background: -moz-linear-gradient(top, #cbcf54, #9bbf63);
+	background: -webkit-gradient(linear, left top, left bottom, from(#cbcf54), to(#9bbf63));
+	background: -webkit-linear-gradient(top, #cbcf54, #9bbf63);
+	background: linear-gradient(to bottom, #cbcf54, #9bbf63);
+}
+/* 疑似要素に、アイコンフォントに割り当てられた文字を記述 */
+#company a:before {
+	content: "\62";
+}
+/* マウスオーバー時にborderを使った三角マークを表示 */
+#company a:link:after,
+#company a:visited:after {
+	display: none;
+}
+#company a:hover:after,
+#company a:active:after {
+	display: block;
+	border-top: solid 10px #9bbf63;
+}
+/* ナビゲーションの色をグラデーションにする */
+#ir a:link,
+#ir a:visited {
+	background-color: #f0b23a;
+	background: -moz-linear-gradient(top, #e6cb33, #d89b25);
+	background: -webkit-gradient(linear, left top, left bottom, from(#e6cb33), to(#d89b25));
+	background: -webkit-linear-gradient(top, #e6cb33, #d89b25);
+	background: linear-gradient(to bottom, #e6cb33, #d89b25);
+}
+/* マウスオーバー時にグラデーションの色を変更 */
+#ir a:hover,
+#ir a:active {
+	background-color: #e7ab36;
+	background: -moz-linear-gradient(top, #f1d641, #e7ab36);
+	background: -webkit-gradient(linear, left top, left bottom, from(#e7ab36), to(#e7ab36));
+	background: -webkit-linear-gradient(top, #f1d641, #e7ab36);
+	background: linear-gradient(to bottom, #f1d641, #e7ab36);
+}
+/* 疑似要素に、アイコンフォントに割り当てられた文字を記述 */
+#ir a:before {
+	content: "\63";
+}
+/* マウスオーバー時にborderを使った三角マークを表示 */
+#ir a:link:after,
+#ir a:visited:after {
+	display: none;
+}
+#ir a:hover:after,
+#ir a:active:after {
+	display: block;
+	border-top: solid 10px #e7ab36;
+}
+/* ナビゲーションの色をグラデーションにする */
+#recruit a:link,
+#recruit a:visited {
+	background-color: #f48b49;
+	background: -moz-linear-gradient(top, #e59e39, #d97537);
+	background: -webkit-gradient(linear, left top, left bottom, from(#e59e39), to(#d97537));
+	background: -webkit-linear-gradient(top, #e59e39, #d97537);
+	background: linear-gradient(to bottom, #e59e39, #d97537);
+}
+/* マウスオーバー時にグラデーションの色を変更 */
+#recruit a:hover,
+#recruit a:active {
+	background-color: #e98546;
+	background: -moz-linear-gradient(top, #f2ac48, #e98546);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2ac48), to(#e98546));
+	background: -webkit-linear-gradient(top, #f2ac48, #e98546);
+	background: linear-gradient(to bottom, #f2ac48, #e98546);
+}
+/* 疑似要素に、アイコンフォントに割り当てられた文字を記述 */
+#recruit a:before {
+	content: "\64";
+}
+/* マウスオーバー時にborderを使った三角マークを表示 */
+#recruit a:link:after,
+#recruit a:visited:after {
+	display: none;
+}
+#recruit a:hover:after,
+#recruit a:active:after {
+	display: block;
+	border-top: solid 10px #e98546;
+}
+/* ナビゲーションの色をグラデーションにする */
+#support a:link,
+#support a:visited {
+	background-color: #e46ba2;
+	background: -moz-linear-gradient(top, #d579bc, #cc538a);
+	background: -webkit-gradient(linear, left top, left bottom, from(#d579bc), to(#cc538a));
+	background: -webkit-linear-gradient(top, #d579bc, #cc538a);
+	background: linear-gradient(to bottom, #d579bc, #cc538a);
+}
+/* マウスオーバー時にグラデーションの色を変更 */
+#support a:hover,
+#support a:active {
+	background-color: #d96499;
+	background: -moz-linear-gradient(top, #e28aca, #d96499);
+	background: -webkit-gradient(linear, left top, left bottom, from(#e28aca), to(#d96499));
+	background: -webkit-linear-gradient(top, #e28aca, #d96499);
+	background: linear-gradient(to bottom, #e28aca, #d96499);
+}
+/* 疑似要素に、アイコンフォントに割り当てられた文字を記述 */
+#support a:before {
+	content: "\65";
+}
+/* マウスオーバー時にborderを使った三角マークを表示 */
+#support a:link:after,
+#support a:visited:after {
+	display: none;
+}
+#support a:hover:after,
+#support a:active:after {
+	display: block;
+	border-top: solid 10px #d96499;
+}
+
+
+/* ------ Mainvisual ------ */
+
+#mainvisual {
+	width: 100%;
+	background-color: #222;
+}
+
+#mainvisual ul {
+	position: relative;
+}
+#mainvisual ul li {
+	display: none;
+	position: absolute;			/* 背面の画像にはposition: absoluteを指定 */
+	z-index: 1;				/* 背面の画像のz-indexを1に指定 */
+	width: 100%;
+	top: 0;					/* 背面の画像をtop: 0に移動し、画像を重ねる */
+}
+#mainvisual ul li:first-child {
+	display: block;
+	position: relative;			/* 前面の画像にはposition: relativeを指定 */
+	z-index: 1000;				/* 前面の画像のz-indexを1000に指定 */
+}
+
+#mainvisual-button {
+	width: 100%;
+	padding: 25px 0 20px;
+	background-color: #fff;
+}
+
+#mainvisual-button ul {
+	text-align: center;
+	line-height: 10px;
+
+}
+#mainvisual-button li {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 8px;
+	overflow: hidden;
+	vertical-align: top;
+}
+#mainvisual-button li a {
+	display: block;
+	width: 10px;
+	height: 20px;
+}
+#mainvisual-button li a:link,
+#mainvisual-button li a:visited{
+	margin-top: 0;
+}
+#mainvisual-button li a:hover,
+#mainvisual-button li a:active,
+#mainvisual-button li a.current {
+	margin-top: -10px;
+}
+
+/* ------ Article ------ */
+
+article {
+	background-color: #fff;
+	padding-bottom: 50px;
+}
+
+/* ------ Index ------ */
+
+#index {
+	padding-bottom: 20px;
+}
+@media screen and (min-width: 640px) {
+	#index {
+		background: url(../images/separetor1.png) no-repeat bottom center;
+	}
+}
+
+#index section a {
+	display: block;
+	position: relative;
+	padding: 10px 0 30px;
+	text-decoration: none;
+}
+#index section a:link,
+#index section a:visited {
+	background-color: transparent;
+}
+#index section a:hover,
+#index section a:active {
+	background-color: #f5f5f5;
+}
+#index .img {
+	margin-bottom: 10px;
+}
+
+#index h1 {
+	margin-bottom: 3px;
+	font-size: 90%;
+	font-weight: bold;
+}
+#index h1:after {
+	content: "\66";
+	font-family: 'icomoon';
+	font-size: 10px;
+	font-weight: normal;
+	transition-duration: 0.3s;
+}
+#index section a:link h1:after,
+#index section a:visited h1:after {
+	margin-left: 5px;
+}
+#index section a:hover h1:after,
+#index section a:active h1:after {
+	margin-left: 8px;
+}
+#index p {
+	color: #666;
+}
+
+/* ------ News ------ */
+
+#news {
+	margin-top: 30px;
+	border-bottom: solid 1px #eee;
+}
+#news h1 a {
+	display: block;
+	position: relative;
+	z-index: 2;
+	padding: 8px 15px;
+	font-size: 100%;
+	color: #fff;
+	text-decoration: none;
+}
+#news h1 a:link,
+#news h1 a:visited {
+	background-color: #8bd5d4;
+}
+#news h1 a:hover,
+#news h1 a:active {
+	background-color: #a1e3e2;
+}
+
+
+#news h1 a:after {
+	content: "\66";
+	font-family: 'icomoon';
+	font-size: 11px;
+	display: block;
+	position: absolute;
+	width: 10px;
+	line-height: 10px;
+	top: 50%;
+	margin-top: -5px;
+	transition-duration: 0.3s;
+}
+#news h1 a:link:after,
+#news h1 a:visited:after {
+	right: 6px;
+}
+#news h1 a:hover:after,
+#news h1 a:active:after {
+	right: 3px;
+}
+
+
+#news h1 a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -8px;
+	left: 30px;
+	border-left: solid 8px transparent;
+	border-right: solid 8px transparent;
+}
+#news h1 a:link:before,
+#news h1 a:visited:before {
+	border-top: solid 8px #8bd5d4;
+}
+#news h1 a:hover:before,
+#news h1 a:active:before {
+	border-top: solid 8px #a1e3e2;
+}
+
+
+#news dl a {
+	position: relative;
+	display: block;
+	padding: 15px 20px 15px 0;
+	text-decoration: none;
+	border-top: solid 1px #eee;
+}
+#news dl a:first-child {
+	border-top: none;
+}
+#news dl a:link,
+#news dl a:visited {
+	background-color: transparent;
+}
+#news dl a:hover,
+#news dl a:active {
+	background-color: #f5f5f5;
+}
+#news dl a:after {
+	content: "\66";
+	font-family: 'icomoon';
+	font-size: 11px;
+	display: block;
+	position: absolute;
+	width: 10px;
+	line-height: 10px;
+	top: 50%;
+	margin-top: -5px;
+	transition-duration: 0.3s;
+}
+#news dl a:link:after,
+#news dl a:visited:after {
+	right: 6px;
+}
+#news dl a:hover:after,
+#news dl a:active:after {
+	right: 3px;
+}
+#news dt  {
+	margin-bottom: 3px;
+	color: #000;
+	font-size: 76%;
+	font-weight: bold;
+}
+
+#news dd  {
+	color: #666;
+	font-size: 76%;
+}
+
+/* ------ Sidebar ------ */
+
+#sidebar {
+	margin-top: 30px;
+	border-bottom: solid 1px #eee;
+}
+#sidebar section {
+	border-top: solid 1px #eee;
+}
+#sidebar h1 {
+	margin-left: 70px;
+	font-size: 90%;
+	font-weight: bold;
+	color: #000;
+}
+#sidebar section a {
+	display: block;
+	position: relative;			/* ボックス全体にposition:relativeを指定 */
+	padding: 15px 20px 15px 0;
+	text-decoration: none;
+	overflow: hidden;
+}
+/* :after疑似要素にリンクアイコンを設定 */
+#sidebar section a:after {
+	content: "\66";
+	font-family: 'icomoon';			/* リンクアイコンをWebフォントとして指定 */
+	font-size: 11px;
+	display: block;
+	position: absolute;			/* position:absoluteでボックスの右側にリンクアイコンを配置 */
+	width: 10px;
+	line-height: 10px;
+	top: 50%;				/* リンクアイコンを上下中央に配置 */
+	margin-top: -5px;
+	transition-duration: 0.3s;		/* リンクアイコンをアニメーション動作させる（FireFoxのみ） */
+}
+#sidebar section a:link,
+#sidebar section a:visited {
+	background-color: transparent;
+}
+#sidebar section a:hover,
+#sidebar section a:active {
+	background-color: #f5f5f5;
+}
+#sidebar section a:link:after,
+#sidebar section a:visited:after {
+	right: 6px;				/* リンクアイコンを右端から6pxに配置*/
+}
+#sidebar section a:hover:after,
+#sidebar section a:active:after {
+	right: 3px;				/* マウスオーバー時にリンクアイコンの位置をずらす */
+}
+#sidebar p {
+	margin-left: 70px;
+	color: #666;
+}
+
+#sidebar .img {
+	float: left;
+	margin: 0;
+}
+
+/* ------ Page Top ------ */
+
+#page-top {
+	border-top: solid 1px #d5d5d5;		/* 1番外側のborder */
+	border-bottom: solid 1px #fff;
+}
+#page-top p {
+	font-size: 68%;
+	border-top: solid 1px #dedede;		/* 2番目のborder */
+}
+#page-top a {
+	display: block;
+	padding-bottom: 3px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 25px;
+	color: #666;
+	border-top: solid 1px #e5e5e5;		/* 1番内側のborder */
+}
+#page-top a:after {
+	content: "\67";
+	font-family: 'icomoon';
+	font-size: 11px;
+	font-weight: normal;
+	margin-left: 5px;
+	color: #999;
+}
+#page-top a:link,
+#page-top a:visited {
+	background-color: #eee;
+}
+#page-top a:hover,
+#page-top a:active {
+	background-color: #e5e5e5;
+}
+
+/* ------ Utility ------ */
+
+#utility {
+	position: absolute; 			/* PC用の表示ではposition:absoluteとする */
+	width: 100%;
+	top: 0;					/* top:0としてヘッダー部に移動 */
+	height: 40px;				/* 高さは固定とする */
+	background-color: #000;
+}
+
+#utility .row {
+	height: 100%;
+}
+
+#country {
+	float: right;
+}
+
+#country p {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 0 5px 0 10px;
+	color: #999;
+	font-weight: bold;
+	border-left: solid 1px #444;
+
+}
+#country p:first-child {
+	border-left: none;
+}
+
+#country p img {
+	width: 41px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+#country p a {
+	display: block;
+	width: 10em;
+	text-decoration: none;
+}
+#country p a:after {
+	content: "\66";
+	font-family: 'icomoon';
+	font-size: 10px;
+	font-weight: normal;
+	color: #38bdbb;
+	margin-left: 5px;
+}
+#country p a:link,
+#country p a:visited {
+	color: #999;
+}
+#country p a:hover,
+#country p a:active {
+	color: #38bdbb;
+}
+
+#search {
+	float: right;
+	width: 179px;
+	margin: 9px 0 0 10px;
+	padding-left: 11px;
+	background-color: #444;
+	overflow: hidden;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+
+#search input {
+	float: left;
+	display: block;
+	width: 70%;
+	height: 22px;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+}
+
+#search a {
+	float: right;
+	display: block;
+	width: 30%;
+	line-height: 22px;
+	color: #fff;
+	font-size: 76%;
+	text-align: center;
+	text-decoration: none;
+}
+#search a:link,
+#search a:visited {
+	background-color: #666;
+	background: -moz-linear-gradient(top, #888, #666);
+	background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#666));
+	background: -webkit-linear-gradient(top, #888, #666);
+	background: linear-gradient(to bottom, #888, #666);
+}
+#search a:hover,
+#search a:active {
+	background-color: #777;
+	background: -moz-linear-gradient(top, #999, #777);
+	background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#777));
+	background: -webkit-linear-gradient(top, #999, #777);
+	background: linear-gradient(to bottom, #999, #777);
+}
+
+/* ------ Footer ------ */
+
+footer {
+	background-color: #f5f5f5;
+}
+footer nav {
+	margin: 30px 0 15px;
+}
+footer nav li {
+	display: inline-block;
+	padding: 0 5px 0 10px;
+	border-left: solid 1px #ddd;
+	font-size: 68%;
+}
+footer nav li:first-child {
+	padding-left: 0;
+	border-left: none;
+}
+footer nav a:link,
+footer nav a:visited {
+	color: #666;
+	text-decoration: none;
+}
+footer nav a:hover,
+footer nav a:active {
+	color: #666;
+	text-decoration: underline;
+}
+#copyright {
+	margin-bottom: 35px;
+}
+
+#copyright p {
+	font-size: 62%;
+	color: #bbb;
+}
+footer .logo {
+	padding-top: 35px;
+	text-align: right;
+}
+
+footer .logo img {
+	width: 72px;
+	height: 46px;
+}
+
+/*-----------------------------------------------------	*/
+/*	for 640px - 979px				*/
+/*-----------------------------------------------------	*/
+
+@media screen and (min-width: 640px) and (max-width: 979px) {
+
+	/* ------ Column ------ */
+
+	/* 左右に25pxの余白を設定 */
+	.row {
+		padding: 0 25px;
+	}
+
+}
+
+
+/*-----------------------------------------------------	*/
+/*	for - 639px					*/
+/*-----------------------------------------------------	*/
+
+@media screen and (max-width: 639px) {
+
+	/* ------ Column ------ */
+
+	/* 各カラムの横並びを解除し、縦１列に並べる */
+	.col,
+	.col.left,
+	.col.right {
+		float: none;
+		width: auto;
+		margin-left: 0;
+	}
+
+	/* ------ Header ------ */
+
+	header {
+		background: #000;
+		padding-top: 0;
+	}
+	header .row:before {
+		display: none;
+	}
+
+	header .col:first-child {
+		height: 90px;
+	}
+
+	header h1 {
+		margin: 0 auto;
+		padding-top: 15px;
+	}
+
+
+	/* ------ Global Navi ------ */
+
+	/* スマートフォン用表示では、横幅いっぱいに配置 */
+	#gnav {
+		float: none;
+		width: 100%;
+	}
+
+	#gnav a {
+		height: 25px;
+		padding-top: 40px;
+		font-size: 68%;
+	}
+	
+	#gnav a:before {
+		top: 10px;
+	}
+
+	/* ------ Mainvisual ------ */
+
+	#mainvisual-button {
+		padding: 15px 0;
+	}
+
+	/* ------ Article ------ */
+
+	article {
+		padding-bottom: 0;
+	}
+
+	article p {
+		font-size: 90%;
+	}
+
+	/* ------ Index ------ */
+
+	#index {
+		padding-bottom: 0;
+	}
+
+	#index section {
+		border-top: solid 1px #eee;
+	}
+
+	#index section a {
+		padding: 15px 20px 15px 15px;
+	}
+
+	#index section a:after {
+		content: "\66";
+		font-family: 'icomoon';
+		font-size: 11px;
+		display: block;
+		position: absolute;
+		width: 10px;
+		line-height: 10px;
+		top: 50%;
+		margin-top: -5px;
+		transition-duration: 0.3s;
+	}
+	#index section a:link:after,
+	#index section a:visited:after {
+		right: 6px;
+	}
+	#index section a:hover:after,
+	#index section a:active:after {
+		right: 3px;
+	}
+
+	#index h1:after {
+		display: none;
+	}
+
+	#index .img {
+		margin-bottom: 0px;
+	}
+
+	/* ------ News ------ */
+
+	#news {
+		margin-top: 0;
+		border-bottom: none;
+	}
+
+	#news dl a {
+		padding: 15px 20px 15px 15px;
+	}
+
+	#news dt,
+	#news dd {
+		font-size: 90%;
+	}
+
+	/* ------ Sidebar ------ */
+
+	#sidebar {
+		margin-top: 0;
+		border-bottom: none;
+	}
+
+	#sidebar section a {
+		padding: 15px 20px 15px 15px;
+	}
+
+	/* ------ Page Top ------ */
+
+	#page-top p {
+		font-size: 76%;
+	}
+
+	#page-top a {
+		line-height: 35px;
+	}
+
+	/* ------ Utility ------ */
+
+	#utility {
+		position: static;		/* スマートフォン用の表示ではposition:staticとする */
+		height: auto;
+		padding: 15px 0;
+		background-color: #f5f5f5;
+		border-bottom: solid 1px #e5e5e5;
+	}
+
+	#utility .row {
+		height: auto;
+	}
+
+	#country {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	#country p {
+		margin-top: 15px;
+		color: #666;
+		border-left-color: #ddd;
+	}
+
+	#country p a:link,
+	#country p a:visited {
+		color: #666;
+	}
+	#country p a:hover,
+	#country p a:active {
+		color: #38bdbb;
+	}
+
+	#search {
+		float: none;
+		width: auto;
+		margin: 0 15px;
+		text-align: center;
+		background-color: #fff;
+		border: solid 1px #e5e5e5;
+	}
+
+	#search input {
+		width: 70%;
+		height: 28px;
+		color: #666;
+	}
+
+	#search a {
+		width: 30%;
+		line-height: 28px;
+	}
+
+	/* ------ Footer ------ */
+
+	footer {
+		border-top: solid 1px #fff;
+	}
+
+	footer nav {
+		margin-top: 15px;
+	}
+
+	footer nav ul {
+		padding: 0 15px;
+		text-align: center;
+	}
+
+	#copyright {
+		margin-bottom: 0;
+		padding: 0 15px;
+		text-align: center;
+	}
+
+	footer .logo {
+		padding: 20px 0 30px;
+		text-align: center;
+	}
+
+}
