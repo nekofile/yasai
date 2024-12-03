@@ -33,7 +33,7 @@ img {
 	height: auto;
 }
 body {
- 	background-image: url(../images/bg-top.jpg);
+ 	background-color: #d9f0f1;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
