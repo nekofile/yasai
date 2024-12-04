@@ -3,9 +3,8 @@
 /* リセットCSS */
 
 html{
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     overflow-y: scroll;
-　　font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-　　overflow-y: scroll;
 }
 ul li {
 	list-style-type: none;
