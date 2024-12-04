@@ -3,6 +3,7 @@
 /* リセットCSS */
 
 html{
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     overflow-y: scroll;
 }
 body, div, dl, dt, dd, ul, ul li, h1, h2, h3, h4, h5, h6,
