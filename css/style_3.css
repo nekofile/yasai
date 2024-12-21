@@ -1,0 +1,470 @@
+﻿@charset "utf-8";
+
+hrml{
+    overflow-y: scroll;
+}
+body, div, dl, dt, dd, ul, ul li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td,
+section, nav, article, aside, hgroup, header, address,
+figure, figcaption {
+	margin: 0;
+	padding: 0;
+}
+img{
+    vertical-align: bottom;
+}
+ul li {
+	list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* PC非表示 */
+
+.top_2_2,
+.smoothie_1-2,
+.smoothie_2-2{
+    display: none;
+}
+
+/* フルードイメージ対応 */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	background-color: #666;
+}
+
+#container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+/* ------ 全体 ------ */
+
+.row {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.one-fifth {width: 18%;}
+.three-fifth {width: 64%;}
+
+/* ------ Header ------ */
+
+header {
+	width: 100%;
+}
+
+#header{
+    height: 83px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    padding-left: 37px;
+}
+#btn{
+    background-color: #360;
+    color: #fff;
+    font-size: 16px;
+    width: 123px;
+    display: block;
+    margin-right: 37px;
+    padding: 4px 0;
+    text-align: center;
+    border-radius: 1px;
+    border: 2px solid #360;
+}
+#btn:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #360;
+}
+
+/* ------ Global Navi ------ */
+
+#g-nav{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#g-nav li a{
+    color: #333;
+    padding-bottom: 4px;
+}
+#g-nav li a:hover{
+    border-bottom: 1px solid #333;
+}
+
+/* ------ 値段・注文ボタン・トップ画像・おまけレシピ ------ */
+
+.top_2{
+    padding-bottom: 52px;
+}
+.price{
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+.btn2{
+    width: 360px;
+    margin: 0 auto;
+    padding-bottom: 38px;
+}
+.btn2 a{
+    background-color: #360;
+    color: #fff;
+    font-size: 21px;
+    display: block;
+    padding: 22px 0;
+    text-align: center;
+    border: 3px solid #360;
+}
+.btn2 a:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #360;
+}
+.recipe{
+    width: 90%;
+    margin: 0 auto;
+    padding: 52px 0 150px 0;
+}
+.recipe img:hover{
+    opacity: 0.7;
+}
+
+/* ------ kyoho ------ */
+
+.kyoho{
+    display: flex;
+    padding-bottom: 64px;
+}
+.kyoho h3 br{
+    display: none;
+}
+.text{
+    padding-top: 20px;
+}
+.text h3{
+    color: #333;
+    font-size: 26px;
+    font-family: serif;
+    letter-spacing: 0.5em;
+}
+.text h3 strong{
+    font-size: 60px;
+    vertical-align: middle;
+}
+.text p{
+    color: #333;
+    font-family: serif;
+    font-size: 21px;
+    line-height: 2em;
+    padding-top: 20px;
+}
+.png{
+    width: 55%;
+    margin-top: -42px;
+    margin-left: -20px;
+}
+
+/* ------ smoothie ------ */
+
+.up-down h3{
+    text-align: right;
+    float: right;     /* カラムを左右逆にする設定 */
+    padding: 30px 0;
+}
+.smoothie .text p{
+    padding: 30px 0;
+}
+.smoothie img{
+    padding-bottom: 54px;
+}
+.smoothie-p{
+    text-align: center;
+    color: #333;
+    font-family: serif;
+    font-size: 21px;
+    letter-spacing: 0.2em;
+}
+.smoothie-p br{
+    display: none;
+}
+.large{
+    font-size: 80px;
+    color: orange;
+    letter-spacing: 0em;
+}
+.medium{
+    font-size: 40px;
+    color: orange;
+}
+
+/* ------ Page top ------ */
+
+#top{
+    max-width: 1280px;
+    background-color: #999;
+    padding: 18px 0;
+    margin-bottom: 2px;
+}
+#top:hover{
+    opacity: 0.7;
+}
+#top p{
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+}
+
+/* ------ Footer ------ */
+
+footer{
+    background-color: #696;
+}
+footer ul{
+    text-align: center;
+    padding: 40px 0;
+}
+footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+    border-left: 1px solid #fff;
+}
+footer ul li:first-child{
+    border-left: none;
+}
+footer ul li a{
+    color: #fff;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+}
+
+/* ------------ タブレット対応 ------------ */
+/* ------------ タブレット対応 ------------ */
+/* ------------ タブレット対応 ------------ */
+
+@media screen and (max-width:979px) {
+
+    .one-fifth {width: 100%;}
+    .three-fifth {width: 100%;}
+    .row{
+        padding: 0 10px;
+    }
+    .price{
+        width: 70%;
+    }
+
+    /* ------ Header ------ */
+    
+    #header{
+        display: block;
+        height: auto;
+    }
+    .one-fifth h1{
+        text-align: center;
+    }
+    #logo{
+        padding: 20px 0 20px 0;
+    }
+    #g-nav{
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #g-nav li{
+        width: 23%;
+        text-align: center;
+        padding: 10px 0 7px 0;
+        background-color: #fc9;
+        border-radius: 8px;
+    }
+    #g-nav li a:hover{
+        border-bottom: none;
+    }
+    #btn{
+        font-size: 18px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 4px 0;
+    } 
+
+    /* ------ kyoho ------ */
+
+    .kyoho-text{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        width: 55%;
+    }
+    .kyoho-text p{
+        font-size: 19px;
+    }
+    .kyoho-text h3 br{
+        display: block;
+    }
+    .kyoho-text p br{
+        display: none;
+    }
+    .png{
+        width: 45%;
+        margin-top: -22px;
+        margin-left: -20px;
+    }
+
+    /* ------ smoothie ------ */
+
+    .up-down h3{
+        text-align: center;
+        float: none;     /* 横並びをやめる */
+        padding: 10px 0;
+    }
+    .up-down h3 br{
+        display: none;
+    }
+    .smoothie .text p{
+        padding: 20px 30px 40px 20px;
+        font-size: 19px;
+    }
+    .smoothie img{
+        padding-bottom: 14px;
+    }
+    .smoothie-p{
+        padding-bottom: 90px;
+    }
+    .smoothie-p br{
+        display: block;
+    }
+
+    /* ------ bunner ------ */
+
+    .btn2{
+        padding-bottom: 70px;
+    }
+
+    /* ------ Footer ------ */
+
+    footer ul{
+        padding: 40px 0 0 0;
+    }
+    footer ul li{
+        padding: 10px 15px;
+        border-left: none;
+    }
+
+}
+
+/* ------------ スマートフォン対応 ------------ */
+/* ------------ スマートフォン対応 ------------ */
+/* ------------ スマートフォン対応 ------------ */
+
+@media screen and (max-width:640px) {
+
+    .row{
+        padding: 0 20px;
+    }
+
+    .top_2_2,
+    .smoothie_1-2,
+    .smoothie_2-2,
+    .kyoho br{
+    display: block;
+    }
+
+    .top_2,
+    .smoothie_1,
+    .smoothie_2{
+        display: none;
+    }
+
+    .price{
+        width: 80%;
+        padding-top: 30px;
+    }
+
+    /* ------ header ------ */
+
+    #header{
+        display: block;
+        height: auto;
+    }
+    .one-fifth h1{
+        text-align: center;
+    }
+    #logo{
+        padding: 20px 0 20px 0;
+    }
+    #g-nav{
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #g-nav li{
+        width: 48%;
+        text-align: center;
+        padding: 10px 0 6px 0;
+        background-color: #fc9;
+        border: 4px solid #fff;
+        border-radius: 10px;
+    }
+    #g-nav li a:hover{
+        border-bottom: none;
+    }
+    #btn{
+        font-size: 18px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 4px 0;
+    }
+
+    /* ------ kyoho ------ */
+
+    /* ------ smoothie ------ */
+
+    .up-down h3 br{
+        display: block;
+    }
+    .smoothie-p{
+        padding-bottom: 30px;
+    }
+    .recipe{
+        padding: 0 0 80px 0;
+    }
+
+    /* ------ bunner ------ */
+
+    .btn2{
+        padding-bottom: 70px;
+    }
+
+    /* ------ Footer ------ */
+
+    footer ul{
+        text-align: left;
+        padding: 40px 0 0 10px;
+    }
+    footer ul li{
+        display: block;
+        padding: 7px;
+        border-left: none;
+    }
+
+}

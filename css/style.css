@@ -1,0 +1,410 @@
+﻿@charset "utf-8";
+
+hrml{
+    overflow-y: scroll;
+}
+body, div, dl, dt, dd, ul, ul li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td,
+section, nav, article, aside, hgroup, header, address,
+figure, figcaption {
+	margin: 0;
+	padding: 0;
+}
+img{
+    vertical-align: bottom;
+}
+ul li {
+	list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* フルードイメージ対応 */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	background-color: #666;
+}
+
+#container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+/* ------ Column ------ */
+
+.row {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.one-fifth {width: 18%;}
+.three-fifth {width: 64%;}
+.one-third {width: 31%;}
+
+/* ------ Header ------ */
+
+header {
+	width: 100%;
+}
+
+#header{
+    height: 83px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#logo{
+    padding-left: 37px;
+}
+#btn{
+    background-color: #360;
+    color: #fff;
+    font-size: 16px;
+    width: 123px;
+    display: block;
+    margin-right: 37px;
+    padding: 4px 0;
+    text-align: center;
+    border-radius: 1px;
+    border: 2px solid #360;
+}
+#btn:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #360;
+}
+
+/* ------ Global Navi ------ */
+
+#g-nav{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#g-nav li a{
+    color: #333;
+    padding-bottom: 4px;
+}
+#g-nav li a:hover{
+    border-bottom: 1px solid #333;
+}
+
+/* ------ Section ------ */
+
+#section{
+    padding-top: 45px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+#section h3{
+    font-weight: 300;
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px dashed #999;
+}
+#section p{
+    padding-top: 20px;
+    font-size: 13px;
+    color: #333;
+}
+section img:hover{
+    opacity: 0.7;
+}
+
+/* ------ h2 ------ */
+
+.h2{
+    width: 200px;
+    margin: 0 auto;
+    padding: 26px 0;
+}
+h2{
+    color: #333;
+    padding-top: 6px;
+    text-align: center;
+    border-bottom: 1px dashed #666;
+}
+.h2-p{
+    color: #666;
+    text-align: center;
+}
+
+/* ------ Recommend ------ */
+
+#recommend{
+    max-width: 1280px;
+    background-color: #eee;
+    padding-bottom: 30px;
+}
+.outer{
+    max-width: 930px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.inner{
+    width: 49%;
+    padding-bottom: 25px;
+}
+.inner img:hover{
+    opacity: 0.7;
+}
+
+/* ------ News ------ */
+
+#news ul{
+    padding: 10px 90px;
+    margin-bottom: 50px;
+}
+#news ul li{
+    padding: 15px;
+    color: #333;
+    border-bottom: 1px solid #999;
+}
+#news ul li:last-child{
+    border-bottom: none
+}
+#news ul li time{
+    padding-right: 50px;
+}
+
+/* ------ Page top ------ */
+
+#top{
+    max-width: 1280px;
+    background-color: #999;
+    padding: 18px 0;
+    margin-bottom: 2px;
+}
+#top:hover{
+    opacity: 0.7;
+}
+#top p{
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+}
+
+/* ------ Footer ------ */
+
+footer{
+    background-color: #696;
+}
+footer ul{
+    text-align: center;
+    padding: 40px 0;
+}
+footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+    border-left: 1px solid #fff;
+}
+footer ul li:first-child{
+    border-left: none;
+}
+footer ul li a{
+    color: #fff;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+}
+
+/* ------------ タブレット対応 ------------ */
+/* ------------ タブレット対応 ------------ */
+/* ------------ タブレット対応 ------------ */
+
+@media screen and (max-width:979px) {
+
+    .one-fifth {width: 100%;}
+    .three-fifth {width: 100%;}
+    .row{
+        padding: 0 10px;
+    }
+
+    /* ------ Header ------ */
+    
+    #header{
+        display: block;
+        height: auto;
+    }
+    .one-fifth h1{
+        text-align: center;
+    }
+    #logo{
+        padding: 20px 0 20px 0;
+    }
+    #g-nav{
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #g-nav li{
+        width: 23%;
+        text-align: center;
+        padding: 10px 0 7px 0;
+        background-color: #fc9;
+        border-radius: 8px;
+    }
+    #g-nav li a:hover{
+        border-bottom: none;
+    }
+    #btn{
+        font-size: 18px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 4px 0;
+    }
+
+    /* ------ News ------ */
+
+    #news ul{
+        padding: 10px 20px;
+    }
+    #news ul li time{
+        padding-right: 30px;
+    }
+
+    /* ------ Footer ------ */
+
+    footer ul{
+        padding: 40px 0 0 0;
+    }
+    footer ul li{
+        padding: 10px 15px;
+        border-left: none;
+    }
+
+}
+
+/* ------------ スマートフォン対応 ------------ */
+/* ------------ スマートフォン対応 ------------ */
+/* ------------ スマートフォン対応 ------------ */
+
+@media screen and (max-width:640px) {
+
+    .one-fifth {width: 100%;}
+    .three-fifth {width: 100%;}
+    .one-third {width: 100%;}
+
+    .row{
+        padding: 0 20px;
+    }
+
+    /* ------ header ------ */
+
+    #header{
+        display: block;
+        height: auto;
+    }
+    .one-fifth h1{
+        text-align: center;
+    }
+    #logo{
+        padding: 20px 0 20px 0;
+    }
+    #g-nav{
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #g-nav li{
+        width: 48%;
+        text-align: center;
+        padding: 10px 0 6px 0;
+        background-color: #fc9;
+        border: 4px solid #fff;
+        border-radius: 10px;
+    }
+    #g-nav li a:hover{
+        border-bottom: none;
+    }
+    #btn{
+        font-size: 18px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 4px 0;
+    }
+
+    /* ------ section ------ */
+
+    #section{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: block;
+    }
+    #section img{
+        width: 100%;
+    }
+    #section h3{
+        font-size: 22px;
+        padding: 10px 0;
+    }
+    #section p{
+        padding: 10px 0 40px 0;
+        font-size: 18px;
+    }
+
+    /* ------ recommend ------ */
+
+    #recommend{
+        padding: 0 30px 20px 30px;
+    }
+    .outer{
+        display: block;
+    }
+    .inner{
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    /* ------ News ------ */
+
+    #news ul{
+        padding: 10px 30px;
+    }
+    #news ul li{
+        padding: 15px;
+        border-bottom: 1px solid #aaa;
+        line-height: 1.7em;
+        font-size: 18px;
+    }
+    #news ul li:last-child{
+        border-bottom: none
+    }
+    .br:after{
+        content: "\A";
+        white-space: pre;
+    }
+
+    /* ------ Footer ------ */
+
+    footer ul{
+        text-align: left;
+        padding: 40px 0 0 10px;
+    }
+    footer ul li{
+        display: block;
+        padding: 7px;
+        border-left: none;
+    }
+
+}
